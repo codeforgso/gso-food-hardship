@@ -2,7 +2,7 @@
 Node.js/express app for visualizing food deserts and the options for eleminating them.
 
 ## Getting it running
-1. Clone the project and `cd` to the directory
+1. Run `git clone https://github.com/codeforgso/triad-food-hardship` and then `cd triad-food-hardship`
 2. Make sure node.js is installed
 	- Run `node --version`. You should see something like `v0.12.4`.
 	- If you don't get an output, you can install Node.js at [nodejs.org](https://nodejs.org/download/)
