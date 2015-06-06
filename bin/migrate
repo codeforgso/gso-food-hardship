@@ -1,0 +1,15 @@
+#!/bin/sh
+
+DB=triad_food_hardship
+
+dropdb ${DB}
+createdb ${DB}
+
+psql -d ${DB} < ./data/food_access_triad.ddl
+psql -c "COPY public.food_access_triad FROM '${PWD}/data/food_access_triad.sql'" -d ${DB}
+psql -d ${DB} < ./data/census_tracts_2010_triad.ddl
+psql -c "COPY public.census_tracts_2010_triad FROM '${PWD}/data/census_tracts_2010_triad.sql'" -d ${DB}
+psql -d ${DB} < ./data/free_meals_triad.ddl
+psql -c "COPY public.free_meals_triad FROM '${PWD}/data/free_meals_triad.csv' DELIMITER ','" -d ${DB}
+psql -d ${DB} < ./data/grocery_stores.ddl
+psql -c "COPY public.grocery_stores FROM '${PWD}/data/grocery_stores.csv' DELIMITER ','" -d ${DB}
