@@ -16,3 +16,7 @@ Node.js/express app for visualizing food deserts and the options for eleminating
 ## Notes
 - grunt will restart the server any time a change is made outside of `/public` or `/views` directories
 - Manually kill the server with `Ctrl-c`
+
+## Heroku instance
+
+[https://stormy-escarpment-9816.herokuapp.com/](https://stormy-escarpment-9816.herokuapp.com/)
