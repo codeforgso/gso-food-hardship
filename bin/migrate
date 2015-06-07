@@ -13,3 +13,5 @@ psql -d ${DB} < ./data/free_meals_triad.ddl
 psql -c "COPY public.free_meals_triad FROM '${PWD}/data/free_meals_triad.csv' DELIMITER ','" -d ${DB}
 psql -d ${DB} < ./data/grocery_stores.ddl
 psql -c "COPY public.grocery_stores FROM '${PWD}/data/grocery_stores.csv' DELIMITER ','" -d ${DB}
+psql -d ${DB} < ./data/hta_counties.sql
+psql -d ${DB} < ./data/hta_places.sql
